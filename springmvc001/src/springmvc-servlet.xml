@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context 
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <!-- 处理映射器, 将bean的name作为url进行查找, 那么在配置处理器(控制器)时需要指定name属性(即url) -->                   
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+    
+    <!-- 处理器适配器, 所有处理器适配器都要实现HandlerAdapter接口 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+    
+    <!-- 视图解释器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+
+
+    <!-- 定义一个bean, 即处理器(或控制器), 映射"/hello"请求 -->
+    <bean name="/hello" class="com.lizj.controller.HelloController"></bean>
+
+</beans>

@@ -7,16 +7,19 @@ public class User {
     private String name;
     
     private String sex;
+    
+    private int age;
 
     public User() {
         
     }
 
-    public User(String id, String name, String sex) {
+    public User(String id, String name, String sex, int age) {
         super();
         this.id = id;
         this.name = name;
         this.sex = sex;
+        this.age = age;
     }
 
     public String getId() {
@@ -42,5 +45,18 @@ public class User {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "id: " + this.id +" name: " + this.name + " age: " + this.age;
+	}
     
 }

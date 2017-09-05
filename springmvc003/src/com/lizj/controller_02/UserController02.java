@@ -14,9 +14,10 @@ import com.lizj.bean.User;
 public class UserController02 {
 
     // 模拟数据库存储
-    private static final List<User> userList = new ArrayList<User>();
+    private static List<User> userList;
     
     {
+        userList = new ArrayList<User>();
         for(int i=1; i<=10; i++) {
             User user = new User();
             user.setId(String.valueOf(i));

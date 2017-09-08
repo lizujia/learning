@@ -12,7 +12,7 @@
     
     <!-- 扫描包路径com.lizj.controller下的所有类, 将带有注解的类注册到spring容器中 -->
     <!-- 此处没有考虑service, DAO层配置, 项目中应该排除service, DAO层的路径 -->
-    <context:component-scan base-package="com.lizj.controller" />
+    <context:component-scan base-package="com.lizj.controller*" />
      
     <!-- 视图解释器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

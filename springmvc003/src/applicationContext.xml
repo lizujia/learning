@@ -6,6 +6,16 @@
                         http://www.springframework.org/schema/context 
                         http://www.springframework.org/schema/context/spring-context.xsd">
                         
-
+	<bean id="userDao" class="com.lizj.dao.UserDao" />
+	
+	<bean id="userService" class="com.lizj.service.UserService">
+		<property name="userDao" ref="userDao" />
+	</bean>
+	
+	<bean id="bookDao" class="com.lizj.dao.BookDao" />
+	
+	<bean id="bookService" class="com.lizj.service.BookService">
+		<property name="bookDao" ref="bookDao" />
+	</bean>
 
 </beans>

@@ -11,6 +11,10 @@ public class UserService {
         return userDao.queryUserById(id);
     }
     
+    public User login(String loginId, String password) {
+        return userDao.queryUserByLoginIdAndPassword(loginId, password);
+    }
+    
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }

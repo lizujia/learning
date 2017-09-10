@@ -1,7 +1,5 @@
 package com.lizj.controller_06;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,17 +27,12 @@ public class LoginController {
     @RequestMapping(value="/login",  method=RequestMethod.POST)
     public String login(String loginId, String password, Model model) {
         User user = userService.login(loginId, password);
-        System.out.println(user.getName());
         if(user == null) {
-            
+        	model.addAttribute("message", "用户名或密码错误");
+        	return "login/error";
         }
         model.addAttribute("user", user);
         return "login/success";
-    }
-    
-    @RequestMapping("/test")
-    public void test(HttpSession session) {
-        System.out.println(1);
     }
     
 }

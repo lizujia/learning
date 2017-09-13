@@ -31,6 +31,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div><a href="mac02/show?userId=4">测试@ModelAttribute注解修饰的方法有返回值, 返回值类型为User, 此链接中有1个userId参数</a></div>
     <div><a href="mac03/show?userId=4">测试@ModelAttribute注解修饰的方法有返回值, 返回值类型为void, 此链接中有1个userId参数</a></div>
     <div><a href="mac04/show?userId=4">测试@ModelAttribute和@RequestMapping修饰同一个方法, 此链接中有1个userId参数</a></div>
-    <div><a href="mac05/show?userId=4">测试@ModelAttribute修改一个请求处理方法的参数, 此链接中有1个userId参数</a></div>
+    <div><a href="mac05/show?userId=4">测试@ModelAttribute修饰一个请求处理方法的参数, 此链接中有1个userId参数</a></div>
   </body>
 </html>

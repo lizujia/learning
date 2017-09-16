@@ -23,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-</hea>
+</head>
 
 <body>
 	<a href="book/add">添加</a> 

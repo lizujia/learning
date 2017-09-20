@@ -5,6 +5,7 @@ public class MyThread extends Thread {
     public Box box;
     
     public MyThread(Box box, String threadName) {
+        super(threadName);
         this.box = box;
     }
     

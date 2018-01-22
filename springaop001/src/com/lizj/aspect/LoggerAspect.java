@@ -11,8 +11,9 @@ import com.lizj.annotation.Logger;
 @Component
 public class LoggerAspect {
 
-    @Around("@annotation(logger)")
-    public void log(ProceedingJoinPoint joinPoint, Logger logger) throws Throwable {
+    //@Around("@annotation(logger)")
+    @Around("execution(* com.lizj.service.impl.IHello.say(..))")
+    public void log(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("-----before-----");
         joinPoint.proceed();
         System.out.println("-----after-----");

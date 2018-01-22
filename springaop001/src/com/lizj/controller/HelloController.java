@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.lizj.service.HelloService;
+import com.lizj.service.impl.IHello;
 
 /**
  * 基于注解的控制器
@@ -13,12 +13,16 @@ import com.lizj.service.HelloService;
 @Controller
 public class HelloController {
 
+    /*@Autowired
+    private HelloService helloService;*/
+    
     @Autowired
-    private HelloService helloService;
+    private IHello helloImpl;
     
     @RequestMapping("/log")
     public String say(Model model) {
-        helloService.hello();
+        // helloService.hello();
+        helloImpl.say();
         model.addAttribute("message", "helloworld");
         return "helloworld";
     }
